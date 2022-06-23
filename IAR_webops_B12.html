@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <style>
+/*         css for all elements in html */
         * {
             list-style: none;
             margin: 0;
@@ -14,6 +15,7 @@
             box-sizing: border-box;
         }
 
+/*         css for the main div */
         .container {
             width: 30%;
             height: 35%;
@@ -27,6 +29,7 @@
 
         }
 
+/*         css for the outer registration form box */
         .regform {
             align-items: center;
             display: inline-block;
@@ -35,6 +38,7 @@
             font-size: 30px;
         }
 
+/*         css for all buttons separately */
         .box {
             border: 2px black;
             display: flex;
@@ -43,12 +47,14 @@
 
         }
 
+/*         abe this is dont to design each div element buttons */
         .input {
             margin-bottom: 25px;
             font-weight: 700;
             font-size: larger;
         }
 
+/*         // css for all buttons in general */
         .button {
             background-color: yellowgreen;
             font-size: large;
@@ -59,6 +65,7 @@
             margin: 15px;
         }
 
+/*         css for hovering the mouse over button */
         .button:hover {
             background-color: blueviolet;
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -68,6 +75,7 @@
             height: 55px;
         }
 
+/*         css to design the textbox for the form */
         .textbox {
             width: 180px;
             height: 30px;
@@ -97,9 +105,12 @@
         <h2 class="regform">Registration Form</h2>
         <div class="box">
 
+<!--             form tag is used to create forms in html -->
             <form>
                 <div class="input">
+<!--                     input tag is used to get data from the user and transfer it the backend file -->
                     <label for="name" class="index">Name: </label>
+<!--                     name is defined to give a unique identifier when it goes to backend. placeholder is used to hold the plain text inside lets say a textbox -->
                     <input type="text" name="name" id="name" class="textbox" placeholder="Enter your name" required>
                 </div>
                 <div class="input">
@@ -142,6 +153,7 @@
         </div>
     </div>
     <script>
+//         .js files will be worked upon here
         function checkPass() {
             pass = document.getElementById("password").value;
             cpass = document.getElementById("cpassword").value;
