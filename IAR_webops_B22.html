@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Bullets</title>
+    <style>
+        /* #body {
+            
+        } */
+        .container {
+            display: flex;
+        }
+
+        .unordered-list {
+            border: 2px solid black;
+            padding: 5%;
+        }
+
+        .list-item {
+            border: 2px solid black;
+            margin-bottom: 10px;
+            background-color: black;
+            width: 220px;
+            border-radius: 8px;
+            color: white;
+        }
+        ul li {
+            background: url(https://www.computerhope.com/issues/pictures/bullet.gif) no-repeat bottom right;
+            background-position: 5px 50%;
+            line-height: 1.5625;
+            padding: 0 0 6px 50px;
+            margin-left: 1em;
+        }
+        ul li:hover {
+            cursor: pointer;
+            list-style-type: disc;
+            color: rgb(0, 12, 14);
+            font-size: larger;
+            font-weight: 700;
+            /* text-align:start; */
+            background: url(https://spng.pngfind.com/pngs/s/57-575341_1904-x-1801-5-arrow-bullet-point-hd.png) no-repeat top left;
+            background-position: 5px 50%;
+            line-height: 1.5625;
+            padding: 0 0 6px 50px;
+            margin-left: 1em;
+        }
+        </style>
+</head>
+
+<body>
+    <h3>This is a List</h3>
+    <div class="container">
+        <ul class="unordered-list">
+            <li class="list-item">First Item</li>
+            <li class="list-item">Second Item</li>
+            <li class="list-item">Third Item</li>
+            <li class="list-item">Fourth Item</li>
+            <li class="list-item">Fifth Item</li>
+            <li class="list-item">Sixth Item</li>
+            <li class="list-item">Seventh Item</li>
+        </ul>
+    </div>
+</body>
+
+</html>
