@@ -1,0 +1,341 @@
+body {
+    background: url(https://cdn.vectorstock.com/i/1000x1000/51/29/global-network-connection-background-vector-23845129.webp);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    display: flex;
+    padding: 0%;
+    background-color: rgb(14, 14, 14);
+    /* position: fixed; */
+}
+
+#buttons {
+    display: flex;
+    justify-content: right;
+    background-color: rgba(1, 1, 1, 0);
+    align-items: center;
+}
+
+#brand_name {
+    display: flex;
+    padding-right: 30%;
+    align-items: center;
+    color: rgb(250, 246, 246);
+}
+
+
+.btn {
+
+    padding: 20px 30px;
+    margin: 2%;
+    background-color: rgb(99, 99, 198);
+    color: rgb(17, 16, 16);
+    font-size: larger;
+    border-radius: 8px;
+}
+
+.a {
+    padding: 20px 20px;
+}
+
+.btn:hover {
+    background-color: rgba(28, 43, 128, 0.467);
+    color: white;
+    border: 2px solid white;
+}
+
+.about {
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: 28%;
+    margin-top: 90px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.629);
+    margin-bottom: 50px;
+}
+
+.h {
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+.h:hover {
+    color: rgb(249, 8, 32);
+}
+
+.para {
+    font-size: 25px;
+}
+
+#head1 {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+#text {
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 7%;
+    background-color: rgba(23, 23, 77, 0.152);
+    margin-bottom: 50px;
+    /* background-color: rgba(243, 125, 8, 1); */
+    /* first */
+}
+
+.flex-item {
+    border: 2px solid white;
+    height: 50%;
+    width: 10%;
+    background-color: rgb(34 30 78);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding-top: 50px;
+}
+
+.item1 {
+    background-color: rgba(34, 30, 78, 0.8);
+    color: white;
+}
+
+.item5 {
+    background-color: rgba(34, 30, 78, 0.8);
+    color: white;
+}
+
+.flex-item:hover {
+    /* background-color: rgb(42, 149, 195); */
+    width: 12%;
+    height: 52%;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container2 {
+    width: 30%;
+    height: 35%;
+    border: 2px solid black;
+    border-width: 3px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(99, 195, 195, 0.773);
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 30px;
+
+}
+
+.regform {
+    align-items: center;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.box {
+    border: 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.button {
+    background-color: yellowgreen;
+    font-size: large;
+    font-weight: 600;
+    height: 50px;
+    width: 70px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.button:hover {
+    background-color: blueviolet;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    color: aliceblue;
+    width: 80px;
+    height: 55px;
+}
+
+.textbox {
+    width: 180px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    float: right;
+    margin-left: 10px;
+    background-color: rgb(41, 91, 91);
+    color: white;
+}
+
+#birthdate {
+    width: 180px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    float: right;
+    margin-left: 10px;
+    background-color: rgb(41, 91, 91);
+    color: white;
+}
+
+#head2 {
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#text2 {
+    margin-top: 2%;
+    font-size: 25px;
+    margin-left: 2%;
+    color: white;
+}
+
+.container3 {
+    display: flex;
+    margin-top: 5%;
+    /* margin-left: 5%; */
+    justify-content: center;
+    margin-bottom: 50px;
+    /* position: fixed; */
+}
+
+.unordered-list {
+    border: 2px solid rgba(255, 255, 255, 0.055);
+    border-radius: 10px;
+    padding: 5%;
+    background-color: rgba(23, 23, 77, 0.152);
+}
+
+.list-item {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+    width: 220px;
+}
+
+ul li {
+    background: url(https://www.computerhope.com/issues/pictures/bullet.gif) no-repeat bottom right;
+    background-position: 5px 50%;
+    line-height: 1.5625;
+    padding: 0 0 6px 50px;
+    margin-left: 1em;
+    background-color: (255, 255, 255, 0.629);
+}
+
+ul li:hover {
+    cursor: pointer;
+    list-style-type: disc;
+    color: rgb(0, 12, 14);
+    font-size: larger;
+    font-weight: 700;
+    /* text-align:start; */
+    background: url(https://spng.pngfind.com/pngs/s/57-575341_1904-x-1801-5-arrow-bullet-point-hd.png) no-repeat top left;
+    background-position: 5px 50%;
+    line-height: 1.5625;
+    padding: 0 0 6px 50px;
+    margin-left: 1em;
+}
+
+.contact {
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+.contact_list {
+    margin-top: 10px;
+    /* padding: 10px; */
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.container4 {
+    display: flex;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.div1 {
+    width: 25%;
+    border-right: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 5px 7px;
+}
+
+.div2 {
+    width: 20%;
+    border-right: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    /* justify-self: center; */
+}
+
+
+.btn2 {
+
+    padding: 15px 25px;
+    margin: 2%;
+    background-color: rgb(99, 99, 198);
+    color: rgb(17, 16, 16);
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.btn2:hover {
+    background-color: rgba(28, 43, 128, 0.467);
+    color: white;
+    border: 2px solid white;
+}
+
+.b {
+    padding: 15px 20px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="IAR_Website.css">
+    <script src="IAR_Website.js"></script>
+</head>
+
+
+<body id="body">
+    <nav>
+
+        <div class="container">
+            <div>
+                <img src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+                    class="image">
+            </div>
+
+            <h1 id="brand_name">BRAND NAME</h1>
+
+            <div id="buttons">
+                <div><a href="http://127.0.0.1:5500/WEBdev/IAR_Website_home.html" style="margin: 6px;">
+                        <button class="btn">Home</button>
+                    </a></div>
+
+                <div><a href="http://127.0.0.1:5500/WEBdev/IAR_Website_reg.html" style="margin: 6px;">
+                        <button class="btn">Registration</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_flex.html" style="margin: 6px;">
+                        <button class="btn">Flex Box</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_cbul.html" style="margin: 6px;">
+                        <button class="btn a">Custom Bullets</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_cont.html" style="margin: 6px;">
+                        <button class="btn a">Contact Us</button>
+                    </a></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container2">
+        <h2 class="regform">Registration Form</h2>
+        <div class="box">
+
+            <form>
+                <div class="input">
+                    <label for="name" class="index">Name: </label>
+                    <input type="text" name="name" id="name" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="rollnum" class="index">Roll No. </label>
+                    <input type="text" name="rollnum" id="rollnum" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="pnumber" class="index">Phone No. </label>
+                    <input type="pnumber" name="pnumber" id="pnumber" class="textbox">
+                </div>
+                <div class="input">
+                    <label for="email" class="index">Email Id: </label>
+                    <input type="email" name="email" id="email" class="textbox"required>
+                </div>
+                <br>
+                <div class="input">
+                    Gender: Male <input type="radio" name="gender"> Female <input type="radio" name="gender">
+                </div>
+                <div class="input">
+                    <label for="birthdate" class="index">Birth Date: </label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </div>
+                <div class="input">
+                    <label for="password" class="index">Password: </label>
+                    <input type="password" name="password" id="password" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="cpassword" class="index">Confirm Password: </label>
+                    <input type="password" name="cpassword" id="cpassword" class="textbox" required>
+                </div>
+                <div class="input">
+                    <input type="submit" name="submit" class="button" onclick="checkPass(), checkEmail()">
+                    <input type="reset" name="reset" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="div1">
+                <h3>Stay Connected</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste at minus quod. Nesciunt molestias,
+                    voluptatem debitis, natus pariatur tenetur temporibus, itaque aut quas amet dolor sunt praesentium
+                    quia aspernatur voluptate.</p>
+            </div>
+            <div class="div2">
+                <h3>Contact Us</h3>
+                <p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <h3 style="color: white;margin-left: 15px;margin-top: 10px;font-size: 25px;">Navigate:</h3>
+            </div>
+            <div id="buttons">
+                <div><a href="http://127.0.0.1:5500/WEBdev/IAR_Website.html" style="margin: 6px;">
+                        <button class="btn2">Home</button>
+                    </a></div>
+
+                <div><a href="http://127.0.0.1:5500/WEBdev/IAR_Website_reg.html" style="margin: 6px;">
+                        <button class="btn2">Registration</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_flex.html" style="margin: 6px;">
+                        <button class="btn2">Flex Box</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_cbul.html" style="margin: 6px;">
+                        <button class="btn2 b">Custom Bullets</button>
+                    </a></div>
+                <div> <a href="http://127.0.0.1:5500/WEBdev/IAR_Website_cont.html" style="margin: 6px;">
+                        <button class="btn2 b">Contact Us</button>
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
