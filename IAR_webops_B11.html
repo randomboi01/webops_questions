@@ -7,31 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
 </head>
+<!--     css file for designing -->
 <style>
+/*     * mark is used to add css to all elements */
     * {
         margin: 0px;
         padding: 0px;
 
     }
-
+    
+/* adding css to the logo */
     .image {
         width: 100px;
         height: 100px;
     }
-
+    
+/* css to the main div */
     .container {
         display: flex;
         padding: 0%;
         background-color: rgb(14, 14, 14);
     }
 
+/*     css to all buttons as a div */
     #buttons {
         display: flex;
         justify-content: right;
         background-color: rgba(1, 1, 1, 0);
         align-items: center;
     }
-
+/* css to the brand name of the website */
     #brand_name {
         display: flex;
         padding-right: 32%;
@@ -39,7 +44,7 @@
         color: rgb(250, 246, 246);
     }
 
-
+/* adding css to all class of buttons separately */
     .btn {
 
         padding: 20px 30px;
@@ -56,12 +61,16 @@
 
         <div class="container">
             <div>
+<!--                 source url for the brand logo -->
                 <img src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
                     class="image">
             </div>
 
+<!--             main heading, ie the brand name (whatever shall it be) -->
             <h1 id="brand_name">BRAND NAME</h1>
 
+<!--             buttons for the nav bar -->
+<!--             ideally all this code when emcorporated in a website, will be inside <nav> -->
             <div id="buttons">
                 <div><a href="https://www.google.com" style="margin: 6px;" target="_blank">
                         <button class="btn">Button1</button>
