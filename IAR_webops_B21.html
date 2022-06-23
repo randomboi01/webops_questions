@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        body {
+            margin-top: 15%;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            /* border: 2px solid black; */
+            justify-content: center;
+            flex-direction: column;
+            /* align-self:centre; */
+        }
+        .flex-item {
+            border: 20px solid black;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border-top: 20px solid blue;
+            /* have to add some more css */
+            /* border-bottom: 20px solid blue; */
+            position: relative;
+            align-self: center;
+            animation-name: loading;
+            animation-duration: 5s;
+            animation-timing-function:unset ;
+            animation-delay: none;
+            animation-iteration-count: infinite;
+            animation-direction: unset;
+            animation-fill-mode: unset;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item"></div>
+    </div>
+</body>
+</html>
+
+
+<!-- how to align a flex item in the centre of the flex container -->
+<!-- .container {
+    display: flex;
+    height: 40vh;
+    width: 40vh;
+    border: 2px solid black;
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-item {
+    border: 2px solid black;
+    width: 20%;
+    height: 20%;
+    align-self: center;
+} -->

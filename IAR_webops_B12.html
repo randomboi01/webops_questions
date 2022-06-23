@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 30%;
+            height: 35%;
+            border: 2px solid black;
+            border-width: 3px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: aqua;
+            margin: auto;
+            margin-top: 10%;
+
+        }
+
+        .regform {
+            align-items: center;
+            display: inline-block;
+            margin-bottom: 40px;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        .box {
+            border: 2px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .input {
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: larger;
+        }
+
+        .button {
+            background-color: yellowgreen;
+            font-size: large;
+            font-weight: 600;
+            height: 50px;
+            width: 70px;
+            border-radius: 5px;
+            margin: 15px;
+        }
+
+        .button:hover {
+            background-color: blueviolet;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            color: aliceblue;
+            width: 80px;
+            height: 55px;
+        }
+
+        .textbox {
+            width: 180px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 6px;
+            float: right;
+            margin-left: 10px;
+            background-color: rgb(41, 91, 91);
+            color: white;
+        }
+
+        #birthdate {
+            width: 180px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 6px;
+            float: right;
+            margin-left: 10px;
+            background-color: rgb(41, 91, 91);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="regform">Registration Form</h2>
+        <div class="box">
+
+            <form>
+                <div class="input">
+                    <label for="name" class="index">Name: </label>
+                    <input type="text" name="name" id="name" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="rollnum" class="index">Roll No. </label>
+                    <input type="text" name="rollnum" id="rollnum" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="pnumber" class="index">Phone No. </label>
+                    <input type="pnumber" name="pnumber" id="pnumber" class="textbox">
+                </div>
+                <div class="input">
+                    <label for="email" class="index">Email Id: </label>
+                    <input type="email" name="email" id="email" class="textbox" required>
+                </div>
+                <br>
+                <div class="input">
+                    Gender: Male <input type="radio" name="gender"> Female <input type="radio" name="gender">
+                </div>
+                <div class="input">
+                    <label for="birthdate" class="index">Birth Date: </label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </div>
+                <div class="input">
+                    <label for="password" class="index">Password: </label>
+                    <input type="password" name="password" id="password" class="textbox" required>
+                </div>
+                <div class="input">
+                    <label for="cpassword" class="index">Confirm Password: </label>
+                    <input type="password" name="cpassword" id="cpassword" class="textbox" required>
+                </div>
+                <div class="input">
+                    <input type="submit" name="submit" class="button" onclick="checkPass(), checkEmail()">
+                    <input type="reset" name="reset" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function checkPass() {
+            pass = document.getElementById("password").value;
+            cpass = document.getElementById("cpassword").value;
+            console.log(pass);
+            console.log(cpass);
+
+            if (pass == cpass) {
+                alert("Correct Password");
+            }
+            else {
+                alert("Incorrect Password");
+            }
+        }
+        
+        function checkEmail(){
+            email = document.getElementById("email").value;
+            console.log(email);
+            let flag;
+            for (let i = 0; i < email.length; i++) {
+                let element = email[i];
+                if(element == '@'){
+                    alert("Valid Email Address");
+                    flag++;
+                }
+                else{
+                    continue;
+                }
+            }
+            if (flag == 0) {
+                alert("Invalid Email Address")
+            }
+        }
+    </script>
+</body>
+
+</html>

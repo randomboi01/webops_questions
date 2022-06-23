@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 2px solid black;
+            height: 40vh;
+            justify-content: space-evenly;
+            align-items: center;
+            /* background-color: rgba(243, 125, 8, 1); */
+        }
+        .flex-item {
+            border: 2px solid black;
+            height: 35%;
+            width: 10%;
+            background-color: rgb(34 30 78);
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            padding-top: 50px;
+        }
+        .item1 {
+            background-color: rgba(34, 30, 78, 0.8);
+            color: white;
+        }
+        .item5 {
+            background-color: rgba(34, 30, 78, 0.8);
+            color: white;
+        }
+        .flex-item:hover {
+            /* background-color: rgb(42, 149, 195); */
+            width: 12%;
+            height: 37%;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item1">Box 1</div>
+        <div class="flex-item item2">Box 2</div>
+        <div class="flex-item item3">Box 3</div>
+        <div class="flex-item item4">Box 4</div>
+        <div class="flex-item item5">Box 5</div>
+    </div>
+</body>
+</html>
