@@ -88,6 +88,13 @@
             color: darkblue;
             font-size: 20px;
         }
+
+        .cb {
+            width: 40px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
         
     </style>
 </head>
@@ -100,6 +107,7 @@
                 <th>Name of Book</th>
                 <th>Name of the Author</th>
                 <th>Publications</th>
+                <th>Read/ Unread</th>
                 <th>Delete Items</th>
             </tr>
         </thead>
@@ -108,24 +116,28 @@
                 <td>Listen to Your Heart: The London Adventure</td>
                 <td>Ruskin Bond</td>
                 <td>XYZ Publications</td>
+                <td><input type="checkbox" name="checkbox" class="cb"></td>
                 <td><button class="btn">Delete</button></td>
             </tr>
             <tr class="design" id="secondRow">
                 <td>Strange Case Of Dr Jekyll And Mr Hyde</td>
                 <td>Robert Louis Stevenson</td>
                 <td>XYZ Publications</td>
+                <td><input type="checkbox" name="checkbox" class="cb"></td>
                 <td><button class="btn">Delete</button></td>
             </tr>
             <tr class="design" id="thirdRow">
                 <td>Lord of the Rings</td>
                 <td>J. R. R. Tolkien</td>
                 <td>XYZ Publications</td>
+                <td><input type="checkbox" name="checkbox" class="cb"></td>
                 <td><button class="btn">Delete</button></td>
             </tr>
             <tr class="design" id="fourthRow">
                 <td>The Adventures of Tom Sawyer</td>
                 <td>Mark Twain</td>
                 <td>XYZ Publications</td>
+                <td><input type="checkbox" name="checkbox" class="cb"></td>
                 <td><button class="btn">Delete</button></td>
             </tr>
         </tbody>
@@ -158,16 +170,15 @@
 
         <script>
             
-            let author = document.getElementById('bauthor').innerHTML;
-            let pub = document.getElementById('bpub').innerHTML;
             let btn2 = document.querySelector('#btn2');
-            let table = document.getElementById('contents');
+            let dbutton = document.getElementsByClassName('btn');
             
             btn2.addEventListener("click", addBooks);
-            table.addEventListener("click", deleteBooks);
-            
-            
 
+            for (let i = 0; i < dbutton.length; i++) {
+                dbutton[i].addEventListener("click", deleteBooks);
+                
+            }
 
         function addBooks(e) {
             e.preventDefault();
@@ -194,12 +205,22 @@
             subvalue3.innerText = pub;
             newRow.appendChild(subvalue3);
 
+            let subsubvalue4 = document.createElement('input');
             let subvalue4 = document.createElement('td');
-            let subsubvalue4 = document.createElement('button');
-            subsubvalue4.innerText = 'Delete';
-            subsubvalue4.classList.add('btn');
+            subsubvalue4.type = "checkbox";
+            subsubvalue4.name = "checkbox";
+            subsubvalue4.classList.add('cb');
             subvalue4.appendChild(subsubvalue4);
             newRow.appendChild(subvalue4);
+
+            let subvalue5 = document.createElement('td');
+            let subsubvalue5 = document.createElement('button');
+            subsubvalue5.innerText = 'Delete';
+            subsubvalue5.classList.add('btn');
+            subvalue5.appendChild(subsubvalue5);
+            newRow.appendChild(subvalue5);
+            subsubvalue5.addEventListener("click", deleteBooks);
+
 
             newRow.classList.add('design');
 
@@ -211,10 +232,10 @@
 
         }
         function deleteBooks(e) {
-
             if (e.target.parentNode.parentNode.getAttribute('class') == 'design') {
                 document.getElementById(e.target.parentNode.parentNode.getAttribute('id')).remove();
             }
+            
         }
 
 
