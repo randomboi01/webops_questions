@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Details</title>
+    <style>
+        body {
+            background-color: #0a1212;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main_header {
+            font-size: 30px;
+            text-align: center;
+            font-style: bold;
+            color: white;
+        }
+
+        table {
+            /* display: flex; */
+            background-color: #3b6f6f;
+            border: 2px solid black;
+            font-size: larger;
+            /* line-height: 300px; */
+
+        }
+
+        th,
+        td {
+            border-right: 1px solid black;
+            border-style: groove;
+            height: 45px;
+            padding: 20px;
+            font-size: 22px;
+        }
+
+        th {
+            color: white;
+        }
+
+        td {
+            color: lightblue;
+        }
+
+        .container2 {
+            border: 2px solid black;
+            margin-top: 30px;
+            box-sizing: border-box;
+            padding: 15px;
+            padding-top: 10px !important;
+            display: flex;
+            flex-direction: column;
+            background-color: #29adad;
+        }
+
+        #heading2 {
+            font-size: 25px;
+            align-self: center;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .formContent {
+            font-size: 25px;
+            color: #02124b;
+        }
+
+        .btn {
+            background-color: transparent;
+            font-size: 20px;
+            color: white;
+            width: 100px;
+            height: 45px;
+            margin-left: 80px;
+            border: 3px solid white !important;
+            border-radius: 5px;
+
+        }
+
+        #btn2 {
+            background-color: #02124b;
+            margin-right: 25px !important;
+            margin-bottom: 15px !important;
+            /* padding-right: ; */
+        }
+
+        .textbox {
+            height: 30px;
+            width: 250px;
+            border-radius: 8px;
+            border: 2px solid black;
+            background-color: #8ddfdf;
+            color: darkblue;
+            font-size: 20px;
+        }
+
+        .cb {
+            width: 40px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .tableContainer {
+            height: 400px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            display: block;
+        }
+
+        #contents {
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3 id="main_header">Library Details</h3>
+    </div>
+    <div class="tableContainer">
+        <table id="contents">
+            <thead>
+                <tr class="rows">
+                    <th>Name of Book</th>
+                    <th>Name of the Author</th>
+                    <th>Publications</th>
+                    <th>Read/ Unread</th>
+                    <th>Delete Items</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr class="design" id="firstRow">
+                    <td>Listen to Your Heart: The London Adventure</td>
+                    <td>Ruskin Bond</td>
+                    <td>XYZ Publications</td>
+                    <td><input type="checkbox" name="checkbox" class="cb"></td>
+                    <td><button class="btn">Delete</button></td>
+                </tr>
+                <tr class="design" id="secondRow">
+                    <td>Strange Case Of Dr Jekyll And Mr Hyde</td>
+                    <td>Robert Louis Stevenson</td>
+                    <td>XYZ Publications</td>
+                    <td><input type="checkbox" name="checkbox" class="cb"></td>
+                    <td><button class="btn">Delete</button></td>
+                </tr>
+                <tr class="design" id="thirdRow">
+                    <td>Lord of the Rings</td>
+                    <td>J. R. R. Tolkien</td>
+                    <td>XYZ Publications</td>
+                    <td><input type="checkbox" name="checkbox" class="cb"></td>
+                    <td><button class="btn">Delete</button></td>
+                </tr>
+                <tr class="design" id="fourthRow">
+                    <td>The Adventures of Tom Sawyer</td>
+                    <td>Mark Twain</td>
+                    <td>XYZ Publications</td>
+                    <td><input type="checkbox" name="checkbox" class="cb"></td>
+                    <td><button class="btn">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container2">
+
+        <h3 id="heading2">ADD MORE BOOKS!</h3>
+        <form>
+            <div class="formContent">
+                <label for="newbook">Name: </label>
+                <input type="text" name="newbook" id="bname" class="textbox">
+            </div>
+
+            <div class="formContent">
+                <label for="author">Author: </label>
+                <input type="text" name="author" id="bauthor" class="textbox">
+            </div>
+
+            <div class="formContent">
+                <label for="publications">Publications: </label>
+                <input type="text" name="publications" id="bpub" class="textbox">
+            </div>
+
+            <button id="btn2" class="btn">Submit</button>
+        </form>
+    </div>
+
+
+
+
+    <script>
+
+        let btn2 = document.querySelector('#btn2');
+        let dbutton = document.getElementsByClassName('btn');
+
+        btn2.addEventListener("click", addBooks);
+
+        for (let i = 0; i < dbutton.length; i++) {
+            dbutton[i].addEventListener("click", deleteBooks);
+
+        }
+
+        function addBooks(e) {
+            e.preventDefault();
+
+            let name = document.getElementById('bname').value;
+            let author = document.getElementById('bauthor').value;
+            let pub = document.getElementById('bpub').value;
+            console.log(name);
+            let tableBody = document.querySelector('tbody');
+            let newRow = document.createElement('tr');
+
+            let ids = Date.now();
+            newRow.setAttribute('id', ids);
+
+            let subvalue1 = document.createElement('td');
+            subvalue1.innerText = name;
+            newRow.appendChild(subvalue1);
+
+            let subvalue2 = document.createElement('td');
+            subvalue2.innerText = author;
+            newRow.appendChild(subvalue2);
+
+            let subvalue3 = document.createElement('td');
+            subvalue3.innerText = pub;
+            newRow.appendChild(subvalue3);
+
+            let subsubvalue4 = document.createElement('input');
+            let subvalue4 = document.createElement('td');
+            subsubvalue4.type = "checkbox";
+            subsubvalue4.name = "checkbox";
+            subsubvalue4.classList.add('cb');
+            subvalue4.appendChild(subsubvalue4);
+            newRow.appendChild(subvalue4);
+
+            let subvalue5 = document.createElement('td');
+            let subsubvalue5 = document.createElement('button');
+            subsubvalue5.innerText = 'Delete';
+            subsubvalue5.classList.add('btn');
+            subvalue5.appendChild(subsubvalue5);
+            newRow.appendChild(subvalue5);
+            subsubvalue5.addEventListener("click", deleteBooks);
+
+
+            newRow.classList.add('design');
+
+
+            tableBody.append(newRow);
+            document.querySelector('form').reset();
+
+            console.log(newRow.getAttribute('id'));
+
+        }
+        function deleteBooks(e) {
+            if (e.target.parentNode.parentNode.getAttribute('class') == 'design') {
+                document.getElementById(e.target.parentNode.parentNode.getAttribute('id')).remove();
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
